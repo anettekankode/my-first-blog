@@ -16,4 +16,19 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-        
+
+class Customer(models.Model):
+    name = models.CharField(max_length=20) 
+    email = models.CharField(max_length=50)
+    adresse = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Meal(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    price = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.name
